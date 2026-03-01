@@ -40,14 +40,6 @@ const fetchSuggestions = async (query) => {
       `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
     );
 
-//     res.ok
-//       ? setSuggestion(await res.json())
-//       : setSuggestion([]);
-//   } 
-//   catch {
-//     setSuggestion([]);
-//   }
-// };
 if (res.ok) {
         const data = await res.json();
         setSuggestion(data);
